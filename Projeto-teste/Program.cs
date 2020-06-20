@@ -11,9 +11,10 @@ namespace Projeto_teste
 
             Console.WriteLine("Tenha esperança, vai passar!");
             Console.WriteLine("Eu quero sair");
-            Console.ReadLine();
+          
 
             //Criação e instanciação de lista
+            Console.WriteLine("-------------------------------");
             List<string> estados = new List<string>();
             estados.Add("Amazonas");
             estados.Insert(0, "Acre");
@@ -40,11 +41,13 @@ namespace Projeto_teste
             Console.WriteLine("Quantidade de estados na lista: "+estados.Count);
 
             List<string> result = estados.FindAll(x => x[0] == 'R');
-            Console.WriteLine("\nEstados brasileiros que começam com a letra R: ");
+            Console.WriteLine("\nEstados brasileiros que começam com a letra R da lista: ");
             foreach (string obj in result)
             {
                 Console.WriteLine(obj);
             }
+
+            Console.WriteLine("-------------------------------");
 
         }
     }
