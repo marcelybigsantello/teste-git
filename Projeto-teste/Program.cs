@@ -28,6 +28,7 @@ namespace Projeto_teste
             estados.Add("Paraná");
             estados.Add("Rio de Janeiro");
             estados.Add("Rio Grande do Norte");
+            estados.Add("Rio Grande do Sul");
             estados.Add("Santa Catarina");
             estados.Add("São Paulo");
 
@@ -36,7 +37,14 @@ namespace Projeto_teste
                 Console.WriteLine(obj);
             }
 
-            Console.WriteLine("\nQuantidade de estados na lista: "+estados.Count);
+            Console.WriteLine("Quantidade de estados na lista: "+estados.Count);
+
+            List<string> result = estados.FindAll(x => x[0] == 'R');
+            Console.WriteLine("\nEstados brasileiros que começam com a letra R: ");
+            foreach (string obj in result)
+            {
+                Console.WriteLine(obj);
+            }
 
         }
     }
